@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="196.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Teamplay.WithdrawalControl">
+   <children>
+      <TextField fx:id="txtUserid" layoutX="215.0" layoutY="44.0" prefHeight="23.0" prefWidth="108.0" promptText="ID" style="-fx-background-color: #d6d8da;" />
+      <TextField fx:id="txtUsername" layoutX="215.0" layoutY="81.0" prefHeight="23.0" prefWidth="108.0" promptText="Name" style="-fx-background-color: #d6d8da;" />
+      <JFXButton fx:id="btnsubmit" layoutX="339.0" layoutY="44.0" onAction="#submit" style="-fx-background-color: #768186;" text="submit" textFill="WHITE" />
+      <ImageView fitHeight="192.0" fitWidth="145.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/img/iconos.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="148.0" layoutY="48.0" text="User Id" />
+      <Label layoutX="151.0" layoutY="85.0" text="Name" />
+      <Label layoutX="151.0" layoutY="134.0" text="Password" />
+      <StackPane prefHeight="35.0" prefWidth="410.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#768186" height="9.0" stroke="#768186" strokeType="INSIDE" strokeWidth="3.0" width="410.0" />
+         </children>
+      </StackPane>
+      <JFXButton fx:id="btncancel" layoutX="339.0" layoutY="81.0" onAction="#cancel" prefHeight="23.0" prefWidth="57.0" style="-fx-background-color: #768186;" text="cancel" textFill="WHITE" />
+      <PasswordField fx:id="txtUserpassword" layoutX="215.0" layoutY="118.0" prefHeight="23.0" prefWidth="124.0" promptText="Password" style="-fx-background-color: #d6d8da;" />
+      <PasswordField fx:id="txtUserpassword2" layoutX="215.0" layoutY="151.0" prefHeight="23.0" prefWidth="124.0" promptText="Confirm Password" style="-fx-background-color: #d6d8da;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Teamplay.MainControl">
+   <children>
+      <StackPane prefHeight="466.0" prefWidth="637.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <SplitPane prefHeight="466.0" prefWidth="311.0">
+                     <items>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <AnchorPane prefHeight="64.0" prefWidth="309.0" style="-fx-background-color: #98CCD9;">
+                                 <children>
+                                    <JFXTextField fx:id="txtSelect" alignment="BOTTOM_LEFT" layoutY="32.0" onAction="#onEnter" prefHeight="29.0" prefWidth="263.0" promptText="Select" />
+                                    <JFXButton fx:id="btnAdd" layoutX="269.0" layoutY="43.0" onAction="#add" text="+add">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <Label fx:id="labelLoginid" layoutX="13.0" prefHeight="29.0" prefWidth="249.0" text="로그인 아이디 나올 부분" />
+                                    <JFXButton fx:id="btnLogout" layoutX="244.0" onAction="#logout" text="LOGOUT" />
+                                    <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="232.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@/img/exercise_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="407.0" prefWidth="310.0">
+                                 <children>
+                                    <TableView fx:id="tableview" prefHeight="400.0" prefWidth="310.0">
+                                      <columns>
+                                        <TableColumn fx:id="colName" prefWidth="111.0" text="Name" />
+                                        <TableColumn fx:id="colPhone" prefWidth="198.0" text="Phone" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+                  <VBox layoutX="312.0" prefHeight="466.0" prefWidth="326.0">
+                     <children>
+                        <AnchorPane prefHeight="146.0" prefWidth="326.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <AnchorPane prefHeight="29.0" prefWidth="326.0" style="-fx-background-color: #98CCD9;">
+                                 <children>
+                                    <Label layoutX="107.0" layoutY="7.0" text="General Infomation" />
+                                 </children>
+                              </AnchorPane>
+                              <ImageView fx:id="imageview" fitHeight="150.0" fitWidth="125.0" layoutX="92.0" layoutY="64.0" pickOnBounds="true" preserveRatio="false" style="-fx-background-color: #ffffff; -fx-border-style: #000000;" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" layoutX="53.0" layoutY="190.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="18.0" layoutX="55.0" layoutY="48.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+                              <Arc fill="WHITE" layoutX="75.0" layoutY="164.0" length="270.0" radiusX="24.0" radiusY="66.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
+                              <Arc fill="WHITE" layoutX="100.0" layoutY="174.0" length="270.0" radiusX="24.0" radiusY="66.0" rotate="-39.3" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
+                              <Arc fill="WHITE" layoutX="241.0" layoutY="164.0" length="270.0" radiusX="24.0" radiusY="66.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
+                              <Arc fill="WHITE" layoutX="234.0" layoutY="174.0" length="270.0" radiusX="24.0" radiusY="66.0" rotate="49.4" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
+                              <Arc fill="WHITE" layoutX="227.0" layoutY="87.0" length="270.0" radiusX="21.0" radiusY="53.0" rotate="-41.6" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
+                              <Arc fill="WHITE" layoutX="91.0" layoutY="79.0" length="270.0" radiusX="21.0" radiusY="53.0" rotate="-135.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
+                              <Circle fill="#1f93ff00" layoutX="155.0" layoutY="128.0" radius="71.0" stroke="#ee8e21" strokeType="INSIDE" strokeWidth="10.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label layoutX="47.0" text="Name" />
+                              <Label layoutX="47.0" layoutY="34.0" text="Phone" />
+                              <Label layoutX="47.0" layoutY="71.0" text="Birthday" />
+                              <Label layoutX="47.0" layoutY="103.0" text="Address" />
+                              <Label layoutX="47.0" layoutY="137.0" text="E-Mail" />
+                              <Label fx:id="labelName" layoutX="150.0" prefHeight="15.0" prefWidth="162.0" />
+                              <Label fx:id="labelPhone" layoutX="150.0" layoutY="34.0" prefHeight="15.0" prefWidth="162.0" />
+                              <Label fx:id="labelBirthday" layoutX="150.0" layoutY="71.0" prefHeight="15.0" prefWidth="162.0" />
+                              <Label fx:id="labelAddress" layoutX="150.0" layoutY="103.0" prefHeight="15.0" prefWidth="162.0" />
+                              <Label fx:id="labelEmail" layoutX="150.0" layoutY="137.0" prefHeight="15.0" prefWidth="162.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="59.0" prefWidth="326.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <JFXButton fx:id="btnUpdate" layoutX="79.0" onAction="#update" style="-fx-background-color: #98CCD9;" text="Update" />
+                              <JFXButton fx:id="btnDelete" layoutX="179.0" onAction="#delete" style="-fx-background-color: #98CCD9;" text="Delete" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
